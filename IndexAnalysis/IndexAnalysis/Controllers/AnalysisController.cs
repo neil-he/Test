@@ -10,7 +10,7 @@ namespace IndexAnalysis.Controllers
     {
         public IActionResult GetTrends()
         {
-            //todo:返回所有竞品数据   2
+            //todo:返回所有竞品数据   25364
             return null;
         }
 
