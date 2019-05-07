@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -20,12 +21,20 @@ namespace IndexAnalysis.Controllers
         {
             m_configuration = configuration;
         }
-        public JsonResult GetTrends()
+        public JsonResult GetTrends(string startDate, string endDate)
         {
+            if (string.IsNullOrWhiteSpace(startDate))
+            {
+                startDate = DateTime.Now.AddMonths(-1).ToString("yyyy-MM-dd");
+            }
+            if (string.IsNullOrWhiteSpace(endDate))
+            {
+                endDate = DateTime.Now.ToString("yyyy-MM-dd");
+            }
             //todo:返回所有竞品数据
             Process p = new Process();
             string path =Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "baidu/demo.py");
-            string sArguments = path;
+            string sArguments =$"{path} {startDate} {endDate}" ;
 
             p.StartInfo.FileName = m_configuration["Python"];
             p.StartInfo.Arguments = sArguments;
@@ -56,11 +65,21 @@ namespace IndexAnalysis.Controllers
             return Json(model);
         }
 
-        public JsonResult GetWeiChatTrends()
+        public JsonResult GetWeiChatTrends(string startDate, string endDate)
         {
+            if (string.IsNullOrWhiteSpace(startDate))
+            {
+                startDate = DateTime.Now.AddMonths(-1).ToString("yyyy-MM-dd");
+            }
+            if (string.IsNullOrWhiteSpace(endDate))
+            {
+                endDate = DateTime.Now.ToString("yyyy-MM-dd");
+            }
             //todo:返回微信指数
+            string url = "http://zhishu.sogou.com/getDateData?kwdNamesStr=%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E6%88%BF%E5%8F%8B,%E5%A5%BD%E6%88%BF%E9%80%9A,%E6%98%93%E6%88%BF%E5%A4%A7%E5%B8%88,%E6%88%BF%E5%9C%A8%E7%BA%BF"
+                +$"&startDate={startDate.Replace("-","")}&endDate={endDate.Replace("-", "")}&dataType=MEDIA_WECHAT&queryType=INPUT";
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://zhishu.sogou.com/getDateData?kwdNamesStr=%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E6%88%BF%E5%8F%8B,%E5%A5%BD%E6%88%BF%E9%80%9A,%E6%98%93%E6%88%BF%E5%A4%A7%E5%B8%88,%E6%88%BF%E5%9C%A8%E7%BA%BF&startDate=20190401&endDate=20190430&dataType=MEDIA_WECHAT&queryType=INPUT");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             var response = request.GetResponse();
             var sr = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
