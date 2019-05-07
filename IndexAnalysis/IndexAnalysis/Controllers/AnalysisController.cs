@@ -34,7 +34,7 @@ namespace IndexAnalysis.Controllers
             //todo:返回所有竞品数据
             Process p = new Process();
             string path =Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "baidu/demo.py");
-            string sArguments =$"{path} {startDate} {endDate.Replace('/','-')}" ;
+            string sArguments =$"{path} {startDate} {endDate}" ;
 
             p.StartInfo.FileName = m_configuration["Python"];
             p.StartInfo.Arguments = sArguments;
@@ -57,7 +57,7 @@ namespace IndexAnalysis.Controllers
 
             //todo:返回微信指数
             string url = "http://zhishu.sogou.com/getDateData?kwdNamesStr=%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E6%88%BF%E5%8F%8B,%E5%A5%BD%E6%88%BF%E9%80%9A,%E6%98%93%E6%88%BF%E5%A4%A7%E5%B8%88,%E6%88%BF%E5%9C%A8%E7%BA%BF"
-                + $"&startDate=20160104&endDate={endDate.Replace("-", "").Replace("/","")}&dataType=SEARCH_ALL&queryType=INPUT";
+                + $"&startDate={startDate.Replace("-", "")}&endDate={endDate.Replace("-", "")}&dataType=SEARCH_ALL&queryType=INPUT";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
