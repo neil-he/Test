@@ -22,7 +22,7 @@ namespace IndexAnalysis.Models
         public int KwdId { get; set; }
         public int PV { get; set; }
         public int IsPeek { get; set; }
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Date { get; set; }
     }
 }
