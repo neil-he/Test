@@ -12,7 +12,7 @@
         height: 400px;
         margin: 0px 0px 0px -50px;
         background-color: white;
-        margin-top: 10px;
+        margin-top: 100px;
     }
 </style>
 
@@ -53,7 +53,7 @@
         loadChart('we','/Analysis/GetWeiChatTrends');
 
         function loadChart(chartId,uri) {
-            var serviceChart = echarts.init(document.getElementById(chartId));
+            var serviceChart = echarts.init(document.getElementById(`${chartId}Chart`));
             var lineType1 = $(`#${chartId}Chart`).attr('data-lineType1');
             var lineType2 = $(`#${chartId}Chart`).attr('data-lineType2');
             var lineType3 = $(`#${chartId}Chart`).attr('data-lineType3');
@@ -73,10 +73,10 @@
                 color: ['#2EC7C9', '#00BFFF', '#FF9933', '#66ccff','#cfcfc'],
                 tooltip: {
                     trigger: 'axis',
-                    extraCssText: 'width:170px;height:100px;'
+                    extraCssText: 'width:170px;height:150px;'
                 },
                 legend: {
-                    data: [lineType1, lineType2, lineType3, lineType4]
+                    data: [lineType1, lineType2, lineType3, lineType4, lineType5]
                 },
                 xAxis: {
                     type: 'time'
