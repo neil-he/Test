@@ -2,93 +2,146 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+<link href="js/lib/layui/css/layui.css" rel="stylesheet" />
+<script src="js/lib/echarts.min.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/layui/layui.js"></script>
+<style>
+    .chartListDiv {
+        width: 1300px;
+        height: 400px;
+        margin: auto;
+        background-color: white;
+        margin-top: 10px;
+    }
+    .chartListDiv1 {
+        width: 1300px;
+        height: 1000px;
+        margin: auto;
+        background-color: white;
+        margin-top: 10px;
+        border:0;
+    }
+</style>
+
+<div class="layui-container layui-form" lay-filter="city_detail" style="width:1300px;">
+
+    <div class="layui-row">
+        <div id="chartList">
+            <div id="NewChart" class="chartListDiv" data-lineType1="房友" data-lineType2="易遨" data-lineType3="安居客"
+                 data-lineType4="梵讯"></div>
+
+            <div id="weChart" class="chartListDiv" data-lineType1="房友" data-lineType2="易遨" data-lineType3="安居客"
+                 data-lineType4="梵讯"></div>
+
         </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+    </div>
+
+    <div class="layui-row">
+        <div style="width:1170px;height:530px;overflow:hidden;border:0px">
+            <div style="width:1200px;height:670px;margin:-205px 0px 0px -50px;">
+                <iframe seamless="seamless" style="height: 740px;width: 1300px;" scrolling="no"
+                        src="http://index.baidu.com/v2/main/index.html#/demand/%E6%88%BF%E5%8F%8B?words=%E6%88%BF%E5%8F%8B,%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E9%93%BE%E5%AE%B6"></iframe>
             </div>
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+
+
+
+
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+    <script>
+        loadChart('NewChart', [[["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "791373"], ["2019-01-15", "792479"], ["2019-02-01", "793647"], ["2019-02-15", "794077"], ["2019-03-02", "796275"], ["2019-03-15", "798554"], ["2019-04-01", "801494"], ["2019-04-15", "803401"], ["2019-05-01", "805547"], ["2019-05-06", "805993"]], [["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "374066"], ["2019-01-15", "374574"], ["2019-02-01", "375225"], ["2019-02-15", "375378"], ["2019-03-02", "376134"], ["2019-03-15", "376918"], ["2019-04-01", "377895"], ["2019-04-15", "378799"], ["2019-05-01", "379618"], ["2019-05-06", "379862"]], [["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "417307"], ["2019-01-15", "417905"], ["2019-02-01", "418422"], ["2019-02-15", "418699"], ["2019-03-02", "420141"], ["2019-03-15", "421636"], ["2019-04-01", "423599"], ["2019-04-15", "424602"], ["2019-05-01", "425929"], ["2019-05-06", "426131"]]]);
+
+        function loadChart(chartId, data) {
+            var serviceChart = echarts.init(document.getElementById(chartId));
+            var lineType1 = $(`#${chartId}Chart`).attr('data-lineType1');
+            var lineType2 = $(`#${chartId}Chart`).attr('data-lineType2');
+            var lineType3 = $(`#${chartId}Chart`).attr('data-lineType3');
+            var lineType4 = $(`#${chartId}Chart`).attr('data-lineType4');
+
+
+            //$.ajax({
+            //	type: "GET",
+            //	dataType: "json",
+            //	url: "/Analysis/GetTrends",
+            //	//data: { cityCode: cityCode, chartId: chartId },
+            //    success:function (data) {
+            var option = {
+                title: {
+                    text: "综合竞品指数"
+                },
+                color: ['#2EC7C9', '#00BFFF', '#FF9933', '#66ccff'],
+                tooltip: {
+                    trigger: 'axis',
+                    extraCssText: 'width:170px;height:100px;'
+                },
+                legend: {
+                    data: [lineType1, lineType2, lineType3, lineType4]
+                },
+                xAxis: {
+                    type: 'time'
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    name: lineType1,
+                    type: 'line',
+                    smooth: true,
+                    data: data[0],
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#2EC7C9'
+                            }
+                        }
+                    }
+                },
+                {
+                    name: lineType2,
+                    type: 'line',
+                    smooth: true,
+                    data: data[1],
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#00BFFF'
+                            }
+                        }
+                    }
+                },
+                {
+                    name: lineType3,
+                    type: 'line',
+                    smooth: true,
+                    data: data[2],
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#FF9933'
+                            }
+                        }
+                    }
+                },
+                {
+                    name: lineType4,
+                    type: 'line',
+                    smooth: true,
+                    data: data[3],
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#66ccff'
+                            }
+                        }
+                    }
+                }
+                ]
+            };
+            serviceChart.setOption(option, true);
+            //}
+            // });
+        }
+    </script>
