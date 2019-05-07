@@ -12,8 +12,9 @@ namespace IndexAnalysis.Models
         public List<Trend> HaoFangTong { get; set; }
         public List<Trend> YiFangDaShi { get; set; }
         public List<Trend> FangZaiXian { get; set; }
-        public List<Trend> FangWangTong { get; set; }
+        //public List<Trend> FangWangTong { get; set; }
     }
+
 
     public class Trend
     {

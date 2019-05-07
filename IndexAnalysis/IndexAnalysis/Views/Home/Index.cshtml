@@ -53,7 +53,7 @@
         loadChart('we','/Analysis/GetWeiChatTrends');
 
         function loadChart(chartId,uri) {
-            var serviceChart = echarts.init(document.getElementById(chartId));
+            var serviceChart = echarts.init(document.getElementById(`${chartId}Chart`));
             var lineType1 = $(`#${chartId}Chart`).attr('data-lineType1');
             var lineType2 = $(`#${chartId}Chart`).attr('data-lineType2');
             var lineType3 = $(`#${chartId}Chart`).attr('data-lineType3');
