@@ -66,8 +66,8 @@
             $.ajax({
             	type: "GET",
             	dataType: "json",
-            	url: uri,
-            	//data: { cityCode: cityCode, chartId: chartId },
+                url: uri,
+                data: { startDate: '2012-01-20', endDate: new Date().getDate() },
                 success:function (data) {
             var option = {
                 title: {
@@ -88,12 +88,15 @@
                     type: 'value'
                 },
                 dataZoom: [{
-                    show: true,
+                    //show: true,
+                    type: 'slider',
                     realtime: true,
-                    //start: 30,
-                   // end: 180,
-                    xAxisIndex: [0, 1],
-                    startValue: '2019-04-01'
+                   
+                    //filterMode: 'filter',
+                    start: 90,
+                    end: 100,
+                    //xAxisIndex: [0, 1],
+                    //startValue: '2019-04-20'
                 }, {
                     type: 'inside'
                 }],
