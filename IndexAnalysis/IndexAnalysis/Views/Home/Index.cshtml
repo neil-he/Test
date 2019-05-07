@@ -10,69 +10,67 @@
     .chartListDiv {
         width: 1300px;
         height: 400px;
-        margin: auto;
+        margin: 0px 0px 0px -50px;
         background-color: white;
         margin-top: 10px;
-    }
-    .chartListDiv1 {
-        width: 1300px;
-        height: 1000px;
-        margin: auto;
-        background-color: white;
-        margin-top: 10px;
-        border:0;
     }
 </style>
 
 <div class="layui-container layui-form" lay-filter="city_detail" style="width:1300px;">
 
     <div class="layui-row">
-        <div id="chartList">
-            <div id="NewChart" class="chartListDiv" data-lineType1="房友" data-lineType2="易遨" data-lineType3="安居客"
-                 data-lineType4="梵讯"></div>
+            <div id="newChart" class="chartListDiv" data-lineType1="梵讯房屋管理系统" data-lineType2="房友" data-lineType3="好房通"
+                 data-lineType4="易房大师" data-lineType5="房在线"></div>
 
-            <div id="weChart" class="chartListDiv" data-lineType1="房友" data-lineType2="易遨" data-lineType3="安居客"
-                 data-lineType4="梵讯"></div>
+            <div id="weChart" class="chartListDiv" data-lineType1="梵讯房屋管理系统" data-lineType2="房友" data-lineType3="好房通"
+                 data-lineType4="易房大师" data-lineType5="房在线"></div>
 
-        </div>
     </div>
 
     <div class="layui-row">
         <div style="width:1170px;height:530px;overflow:hidden;border:0px">
             <div style="width:1200px;height:670px;margin:-205px 0px 0px -50px;">
                 <iframe seamless="seamless" style="height: 740px;width: 1300px;" scrolling="no"
-                        src="http://index.baidu.com/v2/main/index.html#/demand/%E6%88%BF%E5%8F%8B?words=%E6%88%BF%E5%8F%8B,%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E9%93%BE%E5%AE%B6"></iframe>
+                        src="http://index.baidu.com/v2/main/index.html#/demand/%E6%88%BF%E5%8F%8B?words=%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E6%88%BF%E5%8F%8B,%E5%A5%BD%E6%88%BF%E9%80%9A,%E6%98%93%E6%88%BF%E5%A4%A7%E5%B8%88,%E6%88%BF%E5%9C%A8%E7%BA%BF"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div style="width:1170px;height:500px;overflow:hidden;border:0px">
+            <div style="width:1200px;height:670px;margin:-205px 0px 0px -50px;">
+                <iframe seamless="seamless" style="height: 740px;width: 1300px;" scrolling="no"
+                        src="http://index.baidu.com/v2/main/index.html#/crowd/%E6%88%BF%E5%8F%8B?words=%E6%A2%B5%E8%AE%AF%E6%88%BF%E5%B1%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F,%E6%88%BF%E5%8F%8B,%E5%A5%BD%E6%88%BF%E9%80%9A,%E6%98%93%E6%88%BF%E5%A4%A7%E5%B8%88,%E6%88%BF%E5%9C%A8%E7%BA%BF"></iframe>
             </div>
         </div>
     </div>
 
 
-
-
 </div>
 
     <script>
-        loadChart('NewChart', [[["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "791373"], ["2019-01-15", "792479"], ["2019-02-01", "793647"], ["2019-02-15", "794077"], ["2019-03-02", "796275"], ["2019-03-15", "798554"], ["2019-04-01", "801494"], ["2019-04-15", "803401"], ["2019-05-01", "805547"], ["2019-05-06", "805993"]], [["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "374066"], ["2019-01-15", "374574"], ["2019-02-01", "375225"], ["2019-02-15", "375378"], ["2019-03-02", "376134"], ["2019-03-15", "376918"], ["2019-04-01", "377895"], ["2019-04-15", "378799"], ["2019-05-01", "379618"], ["2019-05-06", "379862"]], [["2018-06-01", null], ["2018-06-15", null], ["2018-07-01", null], ["2018-07-15", null], ["2018-08-01", null], ["2018-08-15", null], ["2018-09-01", null], ["2018-09-15", null], ["2018-10-01", null], ["2018-10-15", null], ["2018-11-01", null], ["2018-11-15", null], ["2018-12-01", null], ["2018-12-15", null], ["2019-01-04", "417307"], ["2019-01-15", "417905"], ["2019-02-01", "418422"], ["2019-02-15", "418699"], ["2019-03-02", "420141"], ["2019-03-15", "421636"], ["2019-04-01", "423599"], ["2019-04-15", "424602"], ["2019-05-01", "425929"], ["2019-05-06", "426131"]]]);
+        loadChart('new', '/Analysis/GetTrends');
+        loadChart('we','/Analysis/GetWeiChatTrends');
 
-        function loadChart(chartId, data) {
+        function loadChart(chartId,uri) {
             var serviceChart = echarts.init(document.getElementById(chartId));
             var lineType1 = $(`#${chartId}Chart`).attr('data-lineType1');
             var lineType2 = $(`#${chartId}Chart`).attr('data-lineType2');
             var lineType3 = $(`#${chartId}Chart`).attr('data-lineType3');
             var lineType4 = $(`#${chartId}Chart`).attr('data-lineType4');
+            var lineType5 = $(`#${chartId}Chart`).attr('data-lineType5');
 
-
-            //$.ajax({
-            //	type: "GET",
-            //	dataType: "json",
-            //	url: "/Analysis/GetTrends",
-            //	//data: { cityCode: cityCode, chartId: chartId },
-            //    success:function (data) {
+            $.ajax({
+            	type: "GET",
+            	dataType: "json",
+            	url: uri,
+            	//data: { cityCode: cityCode, chartId: chartId },
+                success:function (data) {
             var option = {
                 title: {
                     text: "综合竞品指数"
                 },
-                color: ['#2EC7C9', '#00BFFF', '#FF9933', '#66ccff'],
+                color: ['#2EC7C9', '#00BFFF', '#FF9933', '#66ccff','#cfcfc'],
                 tooltip: {
                     trigger: 'axis',
                     extraCssText: 'width:170px;height:100px;'
@@ -137,11 +135,24 @@
                             }
                         }
                     }
-                }
+                },
+                 {
+                        name: lineType5,
+                        type: 'line',
+                        smooth: true,
+                        data: data[3],
+                        itemStyle: {
+                            normal: {
+                                lineStyle: {
+                                    color: '#cfcfc'
+                                }
+                            }
+                        }
+                    }
                 ]
             };
             serviceChart.setOption(option, true);
-            //}
-            // });
+            }
+             });
         }
     </script>
