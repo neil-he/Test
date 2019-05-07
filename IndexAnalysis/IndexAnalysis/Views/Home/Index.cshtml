@@ -49,10 +49,10 @@
 </div>
 
     <script>
-        loadChart('new', '/Analysis/GetTrends');
-        loadChart('we','/Analysis/GetWeiChatTrends');
+        loadChart('new', '/Analysis/GetTrends', '综合竞品指数');
+        loadChart('we','/Analysis/GetWeiChatTrends','微信指数');
 
-        function loadChart(chartId,uri) {
+        function loadChart(chartId,uri,text) {
             var serviceChart = echarts.init(document.getElementById(`${chartId}Chart`));
             var lineType1 = $(`#${chartId}Chart`).attr('data-lineType1');
             var lineType2 = $(`#${chartId}Chart`).attr('data-lineType2');
@@ -68,7 +68,7 @@
                 success:function (data) {
             var option = {
                 title: {
-                    text: "综合竞品指数"
+                    text: text
                 },
                 color: ['#2EC7C9', '#00BFFF', '#FF9933', '#66ccff','#cfcfc'],
                 tooltip: {
@@ -140,7 +140,7 @@
                         name: lineType5,
                         type: 'line',
                         smooth: true,
-                        data: data[3],
+                        data: data[4],
                         itemStyle: {
                             normal: {
                                 lineStyle: {
